@@ -62,5 +62,21 @@
   text-decoration: underline; /* Optionnel : garde le soulignement */
 }
 
+.project-button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #61dafb;
+  color: black;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.project-button:hover {
+  background-color: #4db0d1;
+}
+
 
   
