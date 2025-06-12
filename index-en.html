@@ -2,76 +2,149 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Théotime's Portfolio</title>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
   <header>
-    <div class="header-container">
-      <nav class="main-nav">
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-      <div class="language-switch">
-        <a href="index.html" class="project-button">FR</a>
-        <a href="index-en.html" class="project-button">EN</a>
+    <nav class="nav-bar">
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="lang-buttons">
+        <a href="index.html" class="lang-btn">FR</a>
+        <a href="index-en.html" class="lang-btn">EN</a>
       </div>
-    </div>
+    </nav>
   </header>
 
-  <section class="hero" id="about">
-    <div class="hero-content">
-      <h1>Hi! I'm Théotime</h1>
-      <h2>Developer passionate about video game creation.</h2>
+  <section class="hero-section">
+    <div class="hero-text">
+      <h1><span>Hi! I'm Théotime</span></h1>
     </div>
-    <div class="hero-image">
-      <img src="assets/images/photo.jpg" alt="Photo of Théotime" />
-    </div>
-  </section>
-
-  <section id="projects">
-    <h2>My Projects</h2>
-
-    <div class="project-card">
-      <h3>Gecko Pulco (2025)</h3>
-      <p>You play as Pulco, a gecko whose family has been kidnapped by eagles in the heavenly realm. As the last one taken, he must brave the skies, face deadly enemies, and rescue his family before returning home safely.</p>
-      <img src="assets/images/gecko-pulco.jpg" alt="Gecko Pulco Screenshot" class="project-image" />
-      <a href="gecko-pulco.html" class="project-button">View Project</a>
-    </div>
-
-    <div class="project-card">
-      <h3>Before Sunrise (2024)</h3>
-      <p>You play as a vampire awakened after a 100-year slumber, driven by a desperate thirst for blood. Unfortunately, your reserves are gone—likely consumed by your family. You remember some blood hidden in the attic, but dawn is breaking, and its deadly rays could be your end.</p>
-      <img src="assets/images/before-sunrise.png" alt="Before Sunrise Screenshot" class="project-image" />
-      <a href="before-sunrise.html" class="project-button">View Project</a>
+    <div class="hero-photo">
+      <img src="assets/images/photo.jpg" alt="Profile photo" />
     </div>
   </section>
 
-  <section id="tools">
-    <h2>Software Mastery</h2>
-    <div class="tools-container">
-      <img src="assets/images/unity.png" alt="Unity">
-      <img src="assets/images/unreal.png" alt="Unreal Engine">
+  <h2 class="section-title">About</h2>
+  <section class="info-grid">
+    <div class="info-box blue">
+      <h3 class="info-badge blue">Who I Am</h3>
+      <ul>
+        <li>Passionate about creating interactive worlds.</li>
+        <br>
+        <li>Specialized in programming.</li>
+        <br>
+        <li>Curious and always looking to learn new skills.</li>
+      </ul>
+    </div>
+    <div class="info-box purple">
+      <h3 class="info-badge purple">What I Do</h3>
+      <ul>
+        <li>I design narrative and immersive games with Unity and Unreal.</li>
+        <br>
+        <li>I integrate innovative gameplay mechanics.</li>
+        <br>
+        <li>I participate in every stage of development, from idea to playable prototype.</li>
+      </ul>
+    </div>
+    <div class="info-box green">
+      <h3 class="info-badge green">My Goals</h3>
+      <ul>
+        <li>Create impactful and original gameplay experiences.</li>
+        <br>
+        <li>Collaborate with creative teams on ambitious projects.</li>
+        <br>
+        <li>Improve my skills in code, system design, and optimization.</li>
+      </ul>
+    </div>
+    <div class="info-box orange">
+      <h3 class="info-badge orange">My Philosophy</h3>
+      <ul>
+        <li>A good game must first evoke an emotion.</li>
+        <br>
+        <li>Gameplay takes precedence over visuals.</li>
+        <br>
+        <li>Failure is an essential learning tool in development.</li>
+      </ul>
     </div>
   </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:theotime.rey@gmail.com">theotime.rey@gmail.com</a></p>
-    <p>Phone: <a href="tel:+33652290209">+33 6 52 29 02 09</a></p>
-    <div class="social-icons">
-      <a href="https://linkedin.com/" target="_blank"><img src="assets/images/icons/linkedin.png" alt="LinkedIn"></a>
-      <a href="https://instagram.com/" target="_blank"><img src="assets/images/icons/instagram.png" alt="Instagram"></a>
-      <a href="https://itch.io/" target="_blank"><img src="assets/images/icons/itchio.png" alt="Itch.io"></a>
+  <section class="skills-section">
+    <h2 class="section-title">Skills</h2>
+
+    <div class="skills-category">
+      <h3>Everyday Skills</h3>
+      <div class="skills-grid">
+        <img src="assets/images/icons/unity.png" alt="Unity" class="skill-icon-img">
+        <img src="assets/images/icons/vscommu.png" alt="Visual Studio Community" class="skill-icon-img">
+        <img src="assets/images/icons/vscode.png" alt="Visual Studio Code" class="skill-icon-img">
+        <img src="assets/images/icons/github.png" alt="Github" class="skill-icon-img">
+        <img src="assets/images/icons/csharp.png" alt="C#" class="skill-icon-img">
+      </div>
+    </div>
+
+    <div class="skills-category">
+      <h3>Casual Skills</h3>
+      <div class="skills-grid">
+        <img src="assets/images/icons/unreal.png" alt="Unreal Engine" class="skill-icon-img">
+        <img src="assets/images/icons/photoshop.png" alt="Photoshop" class="skill-icon-img">
+        <img src="assets/images/icons/illustrator.png" alt="Illustrator" class="skill-icon-img">
+        <img src="assets/images/icons/blender.png" alt="Blender" class="skill-icon-img">
+        <img src="assets/images/icons/reaper.png" alt="Reaper" class="skill-icon-img">
+      </div>
     </div>
   </section>
 
-  <footer>
-    <p>&copy; 2025 REY Théotime. All rights reserved.</p>
+  <section id="projects" class="projects-section">
+    <h2 class="section-title">My Projects</h2>
+    <div class="projects-grid">
+
+      <div class="project-card">
+        <img src="assets/images/gecko-pulco.jpg" alt="Gecko Pulco" />
+        <h3>Gecko Pulco (4 months - 2025)</h3>
+        <p>You play as Pulco, a gecko whose family has been abducted by eagles in the heavenly realm. As the last one to be captured, he must brave sky-bound dangers, face fierce enemies, and reunite with his loved ones before returning home safely.</p>
+        <br><br>
+        <a href="https://fauwly.itch.io/gecko-pulco" class="view-btn" target="_blank" rel="noopener noreferrer">View Project</a>
+      </div>
+
+      <div class="project-card">
+        <img src="assets/images/before-sunrise.png" alt="Before Sunrise" />
+        <h3>Before Sunrise (3 months - 2024)</h3>
+        <p>You play as a vampire who awakens from a 100-year slumber, driven by an unquenchable thirst for blood. Unfortunately, your supplies are gone likely consumed by your family during hibernation. You remember some blood is left in the attic, but time is running out: dawn is breaking, and its deadly rays threaten your existence.</p>
+        <a href="https://fauwly.itch.io/before-sunrise" class="view-btn" target="_blank" rel="noopener noreferrer">View Project</a>
+      </div>
+
+      <div class="project-card">
+        <img src="assets/images/qui-devinera-l'image.png" alt="Guess the image?" />
+        <h3>Guess the image? (1 week - 2024)</h3>
+        <p>You play as a character who must guess the word corresponding to the image in front of them to avoid falling and losing the game. The game is entirely voice-controlled.</p>
+        <br><br><br><br>
+        <a href="https://fauwly.itch.io/quidevineralimage" class="view-btn" target="_blank" rel="noopener noreferrer">View Project</a>
+      </div>
+
+      <div class="project-card">
+        <img src="assets/images/lost-souls.png" alt="Lost Souls" />
+        <h3>Lost Souls (3 months - 2024)</h3>
+        <p>Three ghostly beings caught between life and death must find their way to achieve peace. They must solve puzzles and collect soul fragments from their past to reach their goal.</p>
+        <br><br><br><br>
+        <a href="https://fauwly.itch.io/lost-souls" class="view-btn" target="_blank" rel="noopener noreferrer">View Project</a>
+      </div>
+
+    </div>
+  </section>
+
+  <footer id="contact">
+    <h2 class="section-title">Contact</h2>
+    <p>
+      <a href="mailto:theotime.rey.pro@gmail.com">theotime.rey.pro@gmail.com</a><br>
+      <a href="tel:0652290209">+33 6 52 29 02 09</a>
+    </p>
   </footer>
+
 </body>
 </html>
