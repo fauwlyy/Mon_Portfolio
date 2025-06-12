@@ -280,3 +280,43 @@ footer {
 .info-badge.orange {
   background-color: #ffa44f;
 }
+
+.hero-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 40px;
+  gap: 80px;
+  flex-wrap: wrap;
+  position: relative;
+  background: url('assets/images/bg.png') no-repeat center/cover; /* ajoute ton fond jeu vidéo ici */
+}
+
+.hero-photo {
+  position: relative;
+}
+
+.hero-photo::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 260px;
+  height: 260px;
+  background: linear-gradient(135deg, #30d6ff55, #c47bff55); /* effet bande stylisée */
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.hero-photo img {
+  position: relative;
+  z-index: 1;
+}
+
+.nav-btn {
+  color: black !important;
+  font-weight: bold;
+}
+
+
