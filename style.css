@@ -158,3 +158,9 @@ footer {
     transform: translateY(0);
   }
 }
+
+.tools-container img {
+  width: 60px !important;
+  max-width: 60px !important;
+}
+
