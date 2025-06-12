@@ -250,4 +250,33 @@ footer {
   background: #2a2d45;
 }
 
+#contact a {
+  color: white;
+  text-decoration: underline;
+}
 
+.info-badge {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #0f1124;
+}
+
+.info-badge.blue {
+  background-color: #30d6ff;
+}
+
+.info-badge.purple {
+  background-color: #c47bff;
+}
+
+.info-badge.green {
+  background-color: #3fe38f;
+}
+
+.info-badge.orange {
+  background-color: #ffa44f;
+}
