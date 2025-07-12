@@ -289,7 +289,7 @@ footer {
   gap: 80px;
   flex-wrap: wrap;
   position: relative;
-  background: url('assets/images/bg.png') no-repeat center/cover; /* ajoute ton fond jeu vidéo ici */
+  background: url('assets/images/bg.png') no-repeat center/cover;
 }
 
 .hero-photo {
@@ -304,7 +304,7 @@ footer {
   transform: translate(-50%, -50%);
   width: 260px;
   height: 260px;
-  background: linear-gradient(135deg, #30d6ff55, #c47bff55); /* effet bande stylisée */
+  background: linear-gradient(135deg, #30d6ff55, #c47bff55);
   border-radius: 50%;
   z-index: 0;
 }
@@ -357,7 +357,7 @@ footer {
   width: 100%;
   margin: 0;
   padding: 0;
-  text-align: justify; /* Optionnel, pour justifier le texte */
+  text-align: justify;
 }
 
 #contact p a {
@@ -407,8 +407,13 @@ footer {
   }
 
   .info-grid {
-    grid-template-columns: 1fr;
+    display: block;
     padding: 20px;
+  }
+
+  .info-box {
+    width: 100%;
+    margin-bottom: 20px;
   }
 
   .skills-grid {
@@ -430,13 +435,5 @@ footer {
     font-size: 16px;
     word-break: break-word;
   }
-
-    .info-box {
-    width: 100%;
-  }
-
-  .info-grid {
-    grid-template-columns: 1fr;
-  }
-
 }
+
