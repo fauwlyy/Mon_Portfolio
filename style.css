@@ -363,3 +363,17 @@ footer {
 #contact p a {
   font-size: 18px;
 }
+
+@media (max-width: 768px) {
+  .info-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .info-box {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
