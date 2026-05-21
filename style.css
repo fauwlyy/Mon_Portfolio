@@ -826,3 +826,20 @@ footer {
 html {
   scroll-behavior: smooth;
 }
+.lang-btn {
+  transition: transform 0.2s ease;
+}
+
+.lang-btn:hover,
+.nav-btn:hover {
+  transform: scale(1.08);
+}
+
+@keyframes pageReveal {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+body {
+  animation: pageReveal 0.5s ease forwards;
+}
