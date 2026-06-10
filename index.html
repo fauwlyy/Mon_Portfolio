@@ -2,198 +2,333 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Portfolio Théotime</title>
-  <link rel="stylesheet" href="style.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Théotime Rey — Tech Game Designer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-  <nav class="nav-bar">
-    <ul class="nav-links">
-      <li><a href="#projects" class="lang-btn nav-btn">Projets</a></li>
-      <li><a href="#contact" class="lang-btn nav-btn">Contact</a></li>
-    </ul>
-    <div class="lang-buttons">
-      <a href="index.html" class="lang-btn">FR</a>
-      <a href="index-en.html" class="lang-btn">EN</a>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <a href="#" class="nav-logo">TR</a>
+    <div class="nav-links">
+      <a href="#about">À propos</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projets</a>
+      <a href="#contact">Contact</a>
+      <a href="index-en.html" class="lang-switch">EN</a>
     </div>
+    <button class="nav-burger" id="burger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
   </nav>
-</header>
 
-  <section class="hero-section">
-  <div class="hero-text">
-    <h1><span>Salut ! Je suis Théotime</span></h1>
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about" class="mobile-link">À propos</a>
+    <a href="#skills" class="mobile-link">Skills</a>
+    <a href="#projects" class="mobile-link">Projets</a>
+    <a href="#contact" class="mobile-link">Contact</a>
+    <a href="index-en.html" class="mobile-link lang-switch">EN</a>
   </div>
-  <div class="hero-photo">
-    <img src="assets/images/photo.jpg" alt="Photo de profil" />
-  </div>
-</section>
 
-<h2 class="section-title">À propos</h2>
-  <section class="info-grid">
-    <div class="info-box blue">
-      <h3 class="info-badge blue">Qui je suis</h3>
-      <ul>
-        <li><strong>Développeur</strong> passionné par la création d’univers interactifs.</li>
-        <br>
-        <li>Spécialisé en <strong>programmation gameplay</strong>.</li>
-        <br>
-        <li><strong>Curieux</strong> et toujours en quête de nouvelles compétences.</li>
-      </ul>
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <p class="hero-eyebrow reveal">Tech Game Designer</p>
+      <h1 class="hero-title reveal">Théotime<br><span class="accent">Rey</span></h1>
+      <p class="hero-sub reveal">Je conçois et programme des mécaniques de gameplay dans Unreal Engine 5.</p>
+      <div class="hero-cta reveal">
+        <a href="#projects" class="btn-primary">Voir mes projets</a>
+        <a href="#contact" class="btn-ghost">Me contacter</a>
+      </div>
     </div>
-    <div class="info-box purple">
-      <h3 class="info-badge purple">Ce que je fais</h3>
-      <ul>
-        <li>Je conçois des jeux narratifs et immersifs avec <strong>Unreal Engine</strong>.</li>
-        <br>
-        <li>J’intègre des mécaniques de gameplay innovantes.</li>
-        <br>
-        <li>Je participe à toutes les étapes de développement, de l’idée au prototype jouable.</li>
-      </ul>
-    </div>
-    <div class="info-box green">
-      <h3 class="info-badge green">Mes objectifs</h3>
-      <ul>
-        <li>Créer des expériences de jeu <strong>marquantes</strong> et <strong>originales</strong>.</li>
-        <br>
-        <li>Collaborer avec des équipes créatives sur des projets ambitieux.</li>
-        <br>
-        <li>Me perfectionner en code et en optimisation.</li>
-      </ul>
-    </div>
-    <div class="info-box orange">
-      <h3 class="info-badge orange">Ma philosophie</h3>
-      <ul>
-        <li>Un bon jeu doit d’abord susciter une émotion.</li>
-        <br>
-        <li>Le gameplay prime sur les graphismes.</li>
-        <br>
-        <li>L’échec est un levier d’apprentissage essentiel dans le développement.</li>
-      </ul>
+    <div class="hero-scroll">
+      <span></span>
     </div>
   </section>
 
-  <section class="skills-section">
-<h2 class="section-title">Skills</h2>
-
-<div class="skills-category">
-  <h3>Everyday Skills</h3>
-  <div class="skills-grid">
-    <div class="skill-item">
-      <img src="assets/images/icons/unreal.png" alt="Unreal Engine" class="skill-icon-img">
-      <span class="skill-label">Unreal Engine</span>
-    </div>
-    <div class="skill-item">
-      <img src="assets/images/icons/github.png" alt="Github" class="skill-icon-img">
-      <span class="skill-label">GitHub</span>
-    </div>
-  </div>
-</div>
-
-<div class="skills-category">
-  <h3>Casual Skills</h3>
-  <div class="skills-grid">
-    <div class="skill-item">
-      <img src="assets/images/icons/unity.png" alt="Unity" class="skill-icon-img">
-      <span class="skill-label">Unity</span>
-    </div>
-    <div class="skill-item">
-      <img src="assets/images/icons/csharp.png" alt="C#" class="skill-icon-img">
-      <span class="skill-label">C#</span>
-    </div>
-    <div class="skill-item">
-      <img src="assets/images/icons/vscommu.png" alt="Visual Studio Community" class="skill-icon-img">
-      <span class="skill-label">VS Community</span>
-    </div>
-    <div class="skill-item">
-      <img src="assets/images/icons/vscode.png" alt="Visual Studio Code" class="skill-icon-img">
-      <span class="skill-label">VS Code</span>
-    </div>
-    <div class="skill-item">
-      <img src="assets/images/icons/photoshop.png" alt="Photoshop" class="skill-icon-img">
-      <span class="skill-label">Photoshop</span>
-    </div>
-    <div class="skill-item">
-      <img src="assets/images/icons/illustrator.png" alt="Illustrator" class="skill-icon-img">
-      <span class="skill-label">Illustrator</span>
-    </div>
-    <div class="skill-item">
-      <img src="assets/images/icons/blender.png" alt="Blender" class="skill-icon-img">
-      <span class="skill-label">Blender</span>
-    </div>
-    <div class="skill-item">
-      <img src="assets/images/icons/reaper.png" alt="Reaper" class="skill-icon-img">
-      <span class="skill-label">Reaper</span>
-    </div>
-  </div>
-</div>
-
-
-  <section id="projects" class="projects-section">
-    <h2 class="section-title">Mes Projets</h2>
-    <div class="projects-grid">
-
-      <div class="project-card">
-  <img src="assets/images/IRA.png" alt="IRA" />
-  <h3>IRA (8 mois - 2025/2026)</h3>
-  <p class="full-width-text">
-    Dans un empire né d'une guerre sans fin, les Dreadborn ont pris le pouvoir et fondé Deador, une dystopie dictatoriale à l'allure romaine, bâtie sur les ruines des Solari. Lorsque le Voidwalker a massacré ses parents, Kaia Valdrik, dernière héritière Solari, a juré vengeance. Depuis, elle vit loin des cités impériales, au sein de la résistance Solari, traquant sans relâche la créature responsable de la chute de sa lignée. Mais plus elle s'approche du Voidwalker, plus elle sent quelque chose d'étrange se réveiller en elle. Une ombre ancienne, un écho du monstre qu'elle pourchasse. Jusqu'à comprendre la vérité : le démon qu'elle cherche à détruire… vit peut-être déjà dans son propre corps.
-  </p>
-  <br>
-  <a href="https://fauwly.itch.io/ira" class="view-btn" target="_blank" rel="noopener noreferrer">Voir le projet</a>
-</div>
-
-      <div class="project-card">
-        <img src="assets/images/gecko-pulco.png" alt="Gecko Pulco" />
-        <h3>Gecko Pulco (4 mois - 2025)</h3>
-       <p class="full-width-text">
-  Vous incarnez Pulco, un gecko dont la famille a été enlevée par des aigles dans le monde céleste. Dernier à être capturé, il doit braver les dangers du ciel, affronter des ennemis redoutables et retrouver les siens avant de rentrer sain et sauf chez lui.
-</p>
-<br>
-        <a href="https://fauwly.itch.io/gecko-pulco" class="view-btn" target="_blank" rel="noopener noreferrer">Voir le projet</a>
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="container">
+      <p class="section-eyebrow reveal">À propos</p>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <h2 class="section-title">Passionné par<br>le game design, le level design <br><span class="accent">et le gameplay</span></h2>
+        </div>
+        <div class="about-body reveal">
+          <p>Étudiant en <strong>Bachelor Game Design</strong> à l'ICAN Lyon, major de promo 2ème année, je me spécialise dans la programmation gameplay via <strong>Unreal Engine 5 Blueprint</strong>.</p>
+          <p>Je conçois des expériences de jeu immersives, des mécaniques de combat souls-like aux platformers 3D cartoon avec une conviction : un bon jeu doit d'abord susciter une émotion.</p>
+          <p>Le gameplay prime sur les graphismes. L'échec est un levier d'apprentissage.</p>
+          <div class="about-tags">
+            <span class="tag">Gameplay Programming</span>
+            <span class="tag">Level Design</span>
+            <span class="tag">Game Design</span>
+            <span class="tag">UE5 Blueprint</span>
+          </div>
+        </div>
       </div>
-
-      <div class="project-card">
-        <img src="assets/images/before-sunrise.png" alt="Before Sunrise" />
-        <h3>Before Sunrise (3 mois - 2024)</h3>
-        <p class="full-width-text">
-  Vous êtes un vampire réveillé après 100 ans, affamé. Vos réserves ont disparu. Il reste du sang au grenier, mais l’aube approche, prête à vous brûler. Vous devez faire vite, ou ce réveil sera votre dernier.
-</p>
-<br><br>
-        <a href="https://fauwly.itch.io/before-sunrise" class="view-btn" target="_blank" rel="noopener noreferrer">Voir le projet</a>
-      </div>
-
-      <div class="project-card">
-        <img src="assets/images/qui-devinera-l'image.png" alt="Qui devinera l'image ?" />
-        <h3>Qui devinera l'image ? (1 semaine - 2024)</h3>
-        <p class="full-width-text">Vous incarnez un personnage qui doit trouver le mot correspondant à l'image devant lui pour ne pas tomber et perdre la partie. Le jeu se fait entièrement avec la voix.</p>
-        <br>
-        <br>
-        <a href="https://fauwly.itch.io/quidevineralimage" class="view-btn" target="_blank" rel="noopener noreferrer">Voir le projet</a>
-      </div>
-
-      <div class="project-card">
-        <img src="assets/images/lost-souls.png" alt="Lost Souls" />
-        <h3>Lost Souls (3 mois - 2024)</h3>
-        <p class="full-width-text">
-  Trois êtres fantomatiques coincés entre la vie et la mort doivent trouver leur chemin pour trouver la paix de leur âme, Ils doivent résoudre des énigmes et récolter des fragments d’âmes de leur passé pour atteindre leur but.
-</p>
-
-        <br>
-        <a href="https://fauwly.itch.io/lost-souls" class="view-btn" target="_blank" rel="noopener noreferrer">Voir le projet</a>
-
-      </div>
-
     </div>
   </section>
 
-  <footer id="contact">
-  <h2 class="section-title">Contact</h2>
-  <p>
-    <a href="mailto:theotime.rey.pro@gmail.com">theotime.rey.pro@gmail.com</a><br>
-    <a href="tel:0652290209">06 52 29 02 09</a>
-  </p>
-</footer>
+  <!-- PROJECTS -->
+  <section class="section" id="projects">
+    <div class="container">
+      <p class="section-eyebrow reveal">Travaux</p>
+      <h2 class="section-title reveal">Projets</h2>
+      <div class="projects-list">
 
+        <article class="project-card reveal" data-project="ira">
+          <div class="project-thumb">
+            <img src="https://fauwlyy.github.io/Mon_Portfolio/assets/images/IRA.png" alt="IRA" />
+          </div>
+          <div class="project-info">
+            <div class="project-meta">
+              <span class="project-tag">Souls-like 3D</span>
+              <span class="project-tag">Unreal Engine 5</span>
+              <span class="project-tag">Blueprint</span>
+            </div>
+            <h3>IRA</h3>
+            <p>Un souls-like dans un empire dystopique à l'esthétique romaine. Tu incarnes Kaia Valdrik, dernière héritière Solari, traquant le Voidwalker, la créature qui a massacré sa famille.</p>
+            <div class="project-duration">8 mois — 2025/2026</div>
+            <button class="btn-primary" onclick="openProject('ira')">Voir le projet</button>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-project="gecko">
+          <div class="project-thumb">
+            <img src="https://fauwlyy.github.io/Mon_Portfolio/assets/images/gecko-pulco.png" alt="Gecko Pulco" />
+          </div>
+          <div class="project-info">
+            <div class="project-meta">
+              <span class="project-tag">Platformer 3D</span>
+              <span class="project-tag">Unity 6</span>
+              <span class="project-tag">Cartoon</span>
+            </div>
+            <h3>Gecko Pulco</h3>
+            <p>Tu incarnes Pulco, un gecko dont la famille a été enlevée par des aigles dans le monde céleste. Un platformer 3D cartoon avec une direction artistique colorée et des ennemis redoutables.</p>
+            <div class="project-duration">4 mois — 2025</div>
+            <button class="btn-primary" onclick="openProject('gecko')">Voir le projet</button>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-project="before-sunrise">
+          <div class="project-thumb">
+            <img src="https://fauwlyy.github.io/Mon_Portfolio/assets/images/before-sunrise.png" alt="Before Sunrise" />
+          </div>
+          <div class="project-info">
+            <div class="project-meta">
+              <span class="project-tag">Platformer 2D</span>
+              <span class="project-tag">Unity 6</span>
+              <span class="project-tag">Gameplay + Level Design</span>
+            </div>
+            <h3>Before Sunrise</h3>
+            <p>Un vampire réveillé après 100 ans, affamé, doit rejoindre ses réserves au grenier avant l'aube. Gameplay d'urgence et de course contre la montre dans un platformer 2D tendu.</p>
+            <div class="project-duration">4 mois — 2024</div>
+            <button class="btn-primary" onclick="openProject('before-sunrise')">Voir le projet</button>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-project="lost-souls">
+          <div class="project-thumb">
+            <img src="https://fauwlyy.github.io/Mon_Portfolio/assets/images/lost-souls.png" alt="Lost Souls" />
+          </div>
+          <div class="project-info">
+            <div class="project-meta">
+              <span class="project-tag">Platformer 2D</span>
+              <span class="project-tag">Unity 2022</span>
+              <span class="project-tag">Puzzle</span>
+            </div>
+            <h3>Lost Souls</h3>
+            <p>Trois êtres fantomatiques coincés entre la vie et la mort doivent résoudre des énigmes et récolter des fragments d'âmes de leur passé pour trouver la paix.</p>
+            <div class="project-duration">4 mois — 2024</div>
+            <button class="btn-primary" onclick="openProject('lost-souls')">Voir le projet</button>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+   <!-- SKILLS -->
+  <section class="section section-dark" id="skills">
+    <div class="container">
+      <p class="section-eyebrow reveal">Outils</p>
+      <h2 class="section-title reveal">Skills</h2>
+      <div class="skills-grid-flat reveal">
+        <div class="skill-item">
+          <div class="skill-icon"><img src="assets/images/icons/unreal.png" alt="Unreal Engine" /></div>
+          <span>Unreal Engine 5</span>
+          <small>Blueprint</small>
+        </div>
+        <div class="skill-item">
+          <div class="skill-icon"><img src="assets/images/icons/unity.png" alt="Unity" /></div>
+          <span>Unity</span>
+          <small>C#</small>
+        </div>
+        <div class="skill-item">
+          <div class="skill-icon"><img src="assets/images/icons/csharp.png" alt="C#" /></div>
+          <span>C#</span>
+          <small>Programmation</small>
+        </div>
+        <div class="skill-item">
+          <div class="skill-icon"><img src="assets/images/icons/github.png" alt="GitHub" /></div>
+          <span>GitHub</span>
+          <small>Collaboration</small>
+        </div>
+        <div class="skill-item">
+          <div class="skill-icon"><img src="assets/images/icons/blender.png" alt="Blender" /></div>
+          <span>Blender</span>
+          <small>Modélisation 3D</small>
+        </div>
+        <div class="skill-item">
+          <div class="skill-icon"><img src="assets/images/icons/vscommu.png" alt="Visual Studio" /></div>
+          <span>Visual Studio</span>
+          <small>IDE</small>
+        </div>
+        <div class="skill-item">
+          <div class="skill-icon"><img src="assets/images/icons/vscode.png" alt="VS Code" /></div>
+          <span>VS Code</span>
+          <small>IDE</small>
+        </div>
+        <div class="skill-item">
+          <div class="skill-icon"><img src="assets/images/icons/photoshop.png" alt="Photoshop" /></div>
+          <span>Photoshop</span>
+          <small>Suite Adobe</small>
+        </div>
+        <div class="skill-item">
+          <div class="skill-icon"><img src="assets/images/icons/illustrator.png" alt="Illustrator" /></div>
+          <span>Illustrator</span>
+          <small>Suite Adobe</small>
+        </div>
+        <div class="skill-item">
+          <div class="skill-icon"><img src="assets/images/icons/reaper.png" alt="Reaper" /></div>
+          <span>Reaper</span>
+          <small>Audio</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="section section-dark" id="experience">
+    <div class="container">
+      <p class="section-eyebrow reveal">Parcours</p>
+      <h2 class="section-title reveal">Formation &amp; Expérience</h2>
+      <div class="timeline-grid">
+        <div class="timeline-col reveal">
+          <h3 class="timeline-heading">Formation</h3>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-body">
+                <span class="timeline-date">2023 — Présent</span>
+                <strong>Bachelor Game Design</strong>
+                <p>ICAN, Lyon — Major de promo 2ème année.</p>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-col reveal">
+          <h3 class="timeline-heading">Expériences</h3>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-body">
+                <span class="timeline-date">2025–2026 · 6 mois</span>
+                <strong>Game Designer — Stage</strong>
+                <p>Level Design, Game Design et programmation.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-body">
+                <span class="timeline-date">2025–2026 · 6 mois</span>
+                <strong>Acteur — Dark Expérience</strong>
+                <p>Salles d'horreur "La Nonne" et "La Créature".</p>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section" id="contact">
+    <div class="container">
+      <p class="section-eyebrow reveal">Parlons-en</p>
+      <h2 class="section-title reveal">Contact</h2>
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <p>Disponible pour des des collaborations sur des projets de jeux, ou simplement pour discuter.</p>
+          <div class="contact-links">
+            <a href="mailto:theotime.rey.pro@gmail.com" class="contact-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
+              theotime.rey.pro@gmail.com
+            </a>
+            <a href="tel:0652290209" class="contact-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16.92z"/></svg>
+              06 52 29 02 09
+            </a>
+            <a href="https://fauwlyy.github.io/Mon_Portfolio/" target="_blank" class="contact-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 1 0 20M2 12h20M12 2C6.48 2 2 6.48 2 12"/></svg>
+              Lyon, France
+            </a>
+          </div>
+        </div>
+        <form class="contact-form reveal" action="https://formspree.io/f/xzdqvkrq" method="POST">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Nom</label>
+              <input type="text" id="name" name="name" placeholder="Votre nom" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="votre@email.com" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="subject">Sujet</label>
+            <input type="text" id="subject" name="subject" placeholder="Objet de votre message" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Votre message..." required></textarea>
+          </div>
+          <button type="submit" class="btn-primary btn-full">Envoyer le message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <span class="footer-logo">Théotime Rey</span>
+        <span class="footer-copy">© 2025 — Tech Game Designer</span>
+        <a href="index-en.html" class="lang-switch">EN</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- PROJECT OVERLAY -->
+  <div class="project-overlay" id="projectOverlay">
+    <div class="overlay-panel" id="overlayPanel">
+      <button class="overlay-close" onclick="closeProject()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+      <div class="overlay-content" id="overlayContent"></div>
+    </div>
+  </div>
+
+  <script src="projects.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>
