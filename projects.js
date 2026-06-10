@@ -15,7 +15,7 @@ Depuis, elle vit loin des cités impériales, au sein de la résistance Solari, 
       { label: "Période", value: "2025–2026" },
       { label: "Moteur", value: "Unreal Engine 5" },
       { label: "Rôle", value: "Gameplay Programming" },
-      { label: "Équipe", value: "2 personnes" },
+      { label: "Équipe", value: "8 personnes" },
       { label: "Genre", value: "Souls-like 3D" },
     ],
     mainImage: "https://fauwlyy.github.io/Mon_Portfolio/assets/images/IRA.png",
@@ -111,7 +111,7 @@ const PROJECTS_EN = {
   ira: {
     ...PROJECTS.ira,
     eyebrow: "Souls-like 3D · 2025–2026",
-    description: `In an empire born from endless war, the Dreadborn seized power and founded Deador — a Roman-aesthetic dictatorial dystopia built on the ruins of the Solari. When the Voidwalker slaughtered her parents, Kaia Valdrik, last Solari heir, swore revenge.
+    description: `In an empire born from endless war, the Dreadborn seized power and founded Deador, a Roman-aesthetic dictatorial dystopia built on the ruins of the Solari. When the Voidwalker slaughtered her parents, Kaia Valdrik, last Solari heir, swore revenge.
 
 She now lives far from the imperial cities, within the Solari resistance, relentlessly hunting the creature behind her lineage's fall. But the closer she gets to the Voidwalker, the more she feels something strange awakening inside her.`,
     details: [
@@ -119,7 +119,7 @@ She now lives far from the imperial cities, within the Solari resistance, relent
       { label: "Period", value: "2025–2026" },
       { label: "Engine", value: "Unreal Engine 5" },
       { label: "Role", value: "Gameplay Programming" },
-      { label: "Team", value: "2 people" },
+      { label: "Team", value: "8 people" },
       { label: "Genre", value: "Souls-like 3D" },
     ],
     linkLabel: "View on itch.io",

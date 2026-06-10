@@ -11,6 +11,7 @@
 </head>
 <body>
 
+  <!-- NAV -->
   <nav class="nav" id="nav">
     <a href="#" class="nav-logo">TR</a>
     <div class="nav-links">
@@ -25,38 +26,43 @@
     </button>
   </nav>
 
+  <!-- MOBILE MENU -->
   <div class="mobile-menu" id="mobileMenu">
     <a href="#about" class="mobile-link">About</a>
     <a href="#skills" class="mobile-link">Skills</a>
     <a href="#projects" class="mobile-link">Projects</a>
     <a href="#contact" class="mobile-link">Contact</a>
-    <a href="index.html" class="mobile-link lang-switch">FR</a>
+    <a href="index.html" class="mobile-link lang-switch">EN</a>
   </div>
 
+  <!-- HERO -->
   <section class="hero" id="home">
     <div class="hero-content">
       <p class="hero-eyebrow reveal">Tech Game Designer</p>
       <h1 class="hero-title reveal">Théotime<br><span class="accent">Rey</span></h1>
-      <p class="hero-sub reveal">I design and program gameplay mechanics in Unreal Engine 5 — no C++, Blueprint only.</p>
+      <p class="hero-sub reveal">I design and program gameplay mechanics in Unreal Engine 5.</p>
       <div class="hero-cta reveal">
         <a href="#projects" class="btn-primary">See my projects</a>
         <a href="#contact" class="btn-ghost">Get in touch</a>
       </div>
     </div>
-    <div class="hero-scroll"><span></span></div>
+    <div class="hero-scroll">
+      <span></span>
+    </div>
   </section>
 
+  <!-- ABOUT -->
   <section class="section" id="about">
     <div class="container">
       <p class="section-eyebrow reveal">About</p>
       <div class="about-grid">
         <div class="about-text reveal">
-          <h2 class="section-title">Passionate about<br>game design<br><span class="accent">and gameplay</span></h2>
+          <h2 class="section-title">Passionate about<br>game design, level design <br><span class="accent">and gameplay</span></h2>
         </div>
         <div class="about-body reveal">
-          <p>Currently studying <strong>Bachelor Game Design (B3)</strong> at ICAN Lyon — top of my class in 2nd year — I specialize in gameplay programming using <strong>Unreal Engine 5 Blueprint</strong>.</p>
-          <p>I build immersive game experiences — from souls-like combat mechanics to 3D cartoon platformers — driven by one conviction: a great game must trigger an emotion first.</p>
-          <p>Gameplay over graphics. Failure is a learning tool.</p>
+          <p>Currently studying <strong>Bachelor Game Design</strong> at ICAN Lyon, top of my class in 2nd year, I specialize in gameplay programming with <strong>Unreal Engine 5 Blueprint</strong>.</p>
+          <p>I create immersive game experiences, from souls-like combat mechanics to colorful 3D platformers, driven by one conviction: a great game should evoke emotion first.</p>
+          <p>Gameplay comes before graphics. Failure is a learning tool.</p>
           <div class="about-tags">
             <span class="tag">Gameplay Programming</span>
             <span class="tag">Level Design</span>
@@ -68,6 +74,86 @@
     </div>
   </section>
 
+  <!-- PROJECTS -->
+  <section class="section" id="projects">
+    <div class="container">
+      <p class="section-eyebrow reveal">Work</p>
+      <h2 class="section-title reveal">Projects</h2>
+      <div class="projects-list">
+
+        <article class="project-card reveal" data-project="ira">
+          <div class="project-thumb">
+            <img src="https://fauwlyy.github.io/Mon_Portfolio/assets/images/IRA.png" alt="IRA" />
+          </div>
+          <div class="project-info">
+            <div class="project-meta">
+              <span class="project-tag">Souls-like 3D</span>
+              <span class="project-tag">Unreal Engine 5</span>
+              <span class="project-tag">Blueprint</span>
+            </div>
+            <h3>IRA</h3>
+            <p>Un souls-like dans un empire dystopique à l'esthétique romaine. Tu incarnes Kaia Valdrik, dernière héritière Solari, traquant le Voidwalker, la créature qui a massacré sa famille.</p>
+            <div class="project-duration">8 mois — 2025/2026</div>
+            <button class="btn-primary" onclick="openProject('ira')">Voir le projet</button>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-project="gecko">
+          <div class="project-thumb">
+            <img src="https://fauwlyy.github.io/Mon_Portfolio/assets/images/gecko-pulco.png" alt="Gecko Pulco" />
+          </div>
+          <div class="project-info">
+            <div class="project-meta">
+              <span class="project-tag">Platformer 3D</span>
+              <span class="project-tag">Unity 6</span>
+              <span class="project-tag">Cartoon</span>
+            </div>
+            <h3>Gecko Pulco</h3>
+            <p>Tu incarnes Pulco, un gecko dont la famille a été enlevée par des aigles dans le monde céleste. Un platformer 3D cartoon avec une direction artistique colorée et des ennemis redoutables.</p>
+            <div class="project-duration">4 mois — 2025</div>
+            <button class="btn-primary" onclick="openProject('gecko')">Voir le projet</button>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-project="before-sunrise">
+          <div class="project-thumb">
+            <img src="https://fauwlyy.github.io/Mon_Portfolio/assets/images/before-sunrise.png" alt="Before Sunrise" />
+          </div>
+          <div class="project-info">
+            <div class="project-meta">
+              <span class="project-tag">Platformer 2D</span>
+              <span class="project-tag">Unity 6</span>
+              <span class="project-tag">Gameplay + Level Design</span>
+            </div>
+            <h3>Before Sunrise</h3>
+            <p>Un vampire réveillé après 100 ans, affamé, doit rejoindre ses réserves au grenier avant l'aube. Gameplay d'urgence et de course contre la montre dans un platformer 2D tendu.</p>
+            <div class="project-duration">4 mois — 2024</div>
+            <button class="btn-primary" onclick="openProject('before-sunrise')">Voir le projet</button>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-project="lost-souls">
+          <div class="project-thumb">
+            <img src="https://fauwlyy.github.io/Mon_Portfolio/assets/images/lost-souls.png" alt="Lost Souls" />
+          </div>
+          <div class="project-info">
+            <div class="project-meta">
+              <span class="project-tag">Platformer 2D</span>
+              <span class="project-tag">Unity 2022</span>
+              <span class="project-tag">Puzzle</span>
+            </div>
+            <h3>Lost Souls</h3>
+            <p>Trois êtres fantomatiques coincés entre la vie et la mort doivent résoudre des énigmes et récolter des fragments d'âmes de leur passé pour trouver la paix.</p>
+            <div class="project-duration">4 mois — 2024</div>
+            <button class="btn-primary" onclick="openProject('lost-souls')">Voir le projet</button>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+   <!-- SKILLS -->
   <section class="section section-dark" id="skills">
     <div class="container">
       <p class="section-eyebrow reveal">Tools</p>
@@ -86,7 +172,7 @@
         <div class="skill-item">
           <div class="skill-icon"><img src="assets/images/icons/csharp.png" alt="C#" /></div>
           <span>C#</span>
-          <small>Programming</small>
+          <small>Programmation</small>
         </div>
         <div class="skill-item">
           <div class="skill-icon"><img src="assets/images/icons/github.png" alt="GitHub" /></div>
@@ -96,7 +182,7 @@
         <div class="skill-item">
           <div class="skill-icon"><img src="assets/images/icons/blender.png" alt="Blender" /></div>
           <span>Blender</span>
-          <small>3D Modeling</small>
+          <small>Modélisation 3D</small>
         </div>
         <div class="skill-item">
           <div class="skill-icon"><img src="assets/images/icons/vscommu.png" alt="Visual Studio" /></div>
@@ -111,12 +197,12 @@
         <div class="skill-item">
           <div class="skill-icon"><img src="assets/images/icons/photoshop.png" alt="Photoshop" /></div>
           <span>Photoshop</span>
-          <small>Adobe Suite</small>
+          <small>Suite Adobe</small>
         </div>
         <div class="skill-item">
           <div class="skill-icon"><img src="assets/images/icons/illustrator.png" alt="Illustrator" /></div>
           <span>Illustrator</span>
-          <small>Adobe Suite</small>
+          <small>Suite Adobe</small>
         </div>
         <div class="skill-item">
           <div class="skill-icon"><img src="assets/images/icons/reaper.png" alt="Reaper" /></div>
@@ -127,76 +213,7 @@
     </div>
   </section>
 
-  <section class="section" id="projects">
-    <div class="container">
-      <p class="section-eyebrow reveal">Work</p>
-      <h2 class="section-title reveal">Projects</h2>
-      <div class="projects-list">
-
-        <article class="project-card reveal" data-project="ira">
-          <div class="project-thumb"><img src="https://fauwlyy.github.io/Mon_Portfolio/assets/images/IRA.png" alt="IRA" /></div>
-          <div class="project-info">
-            <div class="project-meta">
-              <span class="project-tag">Souls-like 3D</span>
-              <span class="project-tag">Unreal Engine 5</span>
-              <span class="project-tag">Blueprint</span>
-            </div>
-            <h3>IRA</h3>
-            <p>A souls-like set in a dystopian empire with Roman aesthetics. You play as Kaia Valdrik, last Solari heir, hunting the Voidwalker — the creature that slaughtered her family.</p>
-            <div class="project-duration">8 months — 2025/2026</div>
-            <button class="btn-primary" onclick="openProject('ira')">View project</button>
-          </div>
-        </article>
-
-        <article class="project-card reveal" data-project="gecko">
-          <div class="project-thumb"><img src="https://fauwlyy.github.io/Mon_Portfolio/assets/images/gecko-pulco.png" alt="Gecko Pulco" /></div>
-          <div class="project-info">
-            <div class="project-meta">
-              <span class="project-tag">3D Platformer</span>
-              <span class="project-tag">Unity 6</span>
-              <span class="project-tag">Cartoon</span>
-            </div>
-            <h3>Gecko Pulco</h3>
-            <p>Play as Pulco, a gecko whose family was kidnapped by eagles in the celestial world. A colorful 3D cartoon platformer with challenging enemies and sky-high stakes.</p>
-            <div class="project-duration">4 months — 2025</div>
-            <button class="btn-primary" onclick="openProject('gecko')">View project</button>
-          </div>
-        </article>
-
-        <article class="project-card reveal" data-project="before-sunrise">
-          <div class="project-thumb"><img src="https://fauwlyy.github.io/Mon_Portfolio/assets/images/before-sunrise.png" alt="Before Sunrise" /></div>
-          <div class="project-info">
-            <div class="project-meta">
-              <span class="project-tag">2D Platformer</span>
-              <span class="project-tag">Unity 6</span>
-              <span class="project-tag">Gameplay + Level Design</span>
-            </div>
-            <h3>Before Sunrise</h3>
-            <p>A vampire awoken after 100 years must reach his blood supply in the attic before dawn burns him alive. Tense, time-pressured 2D platformer gameplay.</p>
-            <div class="project-duration">4 months — 2024</div>
-            <button class="btn-primary" onclick="openProject('before-sunrise')">View project</button>
-          </div>
-        </article>
-
-        <article class="project-card reveal" data-project="lost-souls">
-          <div class="project-thumb"><img src="https://fauwlyy.github.io/Mon_Portfolio/assets/images/lost-souls.png" alt="Lost Souls" /></div>
-          <div class="project-info">
-            <div class="project-meta">
-              <span class="project-tag">2D Platformer</span>
-              <span class="project-tag">Unity 2022</span>
-              <span class="project-tag">Puzzle</span>
-            </div>
-            <h3>Lost Souls</h3>
-            <p>Three ghostly beings stuck between life and death must solve puzzles and gather soul fragments from their past to finally find peace.</p>
-            <div class="project-duration">4 months — 2024</div>
-            <button class="btn-primary" onclick="openProject('lost-souls')">View project</button>
-          </div>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
+  <!-- EXPERIENCE -->
   <section class="section section-dark" id="experience">
     <div class="container">
       <p class="section-eyebrow reveal">Background</p>
@@ -209,33 +226,10 @@
               <div class="timeline-dot"></div>
               <div class="timeline-body">
                 <span class="timeline-date">2023 — Present</span>
-                <strong>Bachelor Game Design (B3)</strong>
-                <p>ICAN, Lyon — Top of class, 2nd year</p>
+                <strong>Bachelor Game Design</strong>
+                <p>ICAN, Lyon — Top of class, 2nd year.</p>
               </div>
             </div>
-            <div class="timeline-item">
-              <div class="timeline-dot"></div>
-              <div class="timeline-body">
-                <span class="timeline-date">2022</span>
-                <strong>BTS Dietetics</strong>
-                <p>EPSECO, Valence</p>
-              </div>
-            </div>
-            <div class="timeline-item">
-              <div class="timeline-dot"></div>
-              <div class="timeline-body">
-                <span class="timeline-date">2021</span>
-                <strong>STAPS</strong>
-                <p>UFR Staps, Grenoble</p>
-              </div>
-            </div>
-            <div class="timeline-item">
-              <div class="timeline-dot"></div>
-              <div class="timeline-body">
-                <span class="timeline-date">2020</span>
-                <strong>BAC STI2D</strong>
-                <p>Lycée du Dauphiné, Romans-sur-Isère</p>
-              </div>
             </div>
           </div>
         </div>
@@ -245,26 +239,19 @@
             <div class="timeline-item">
               <div class="timeline-dot"></div>
               <div class="timeline-body">
-                <span class="timeline-date">2025–2026 · 6 months</span>
+                <span class="timeline-date">2025–2026 · 6 mois</span>
                 <strong>Game Designer — Internship</strong>
-                <p>Level Design, Game Design and programming</p>
+                <p>Level Design, Game Design and programming.</p>
               </div>
             </div>
             <div class="timeline-item">
               <div class="timeline-dot"></div>
               <div class="timeline-body">
-                <span class="timeline-date">2025–2026 · 6 months</span>
-                <strong>Actor — Dark Experience</strong>
-                <p>Horror rooms "La Nonne" and "La Créature"</p>
+                <span class="timeline-date">2025–2026 · 6 mois</span>
+                <strong>Acteur — Dark Expérience</strong>
+                <p>Horror rooms "La Nonne" and "La Créature".</p>
               </div>
             </div>
-            <div class="timeline-item">
-              <div class="timeline-dot"></div>
-              <div class="timeline-body">
-                <span class="timeline-date">2023 — Present</span>
-                <strong>Student job — Carrefour</strong>
-                <p>Beverages department management</p>
-              </div>
             </div>
           </div>
         </div>
@@ -272,13 +259,14 @@
     </div>
   </section>
 
+  <!-- CONTACT -->
   <section class="section" id="contact">
     <div class="container">
       <p class="section-eyebrow reveal">Let's talk</p>
       <h2 class="section-title reveal">Contact</h2>
       <div class="contact-grid">
         <div class="contact-info reveal">
-          <p>Available for internships, game project collaborations, or just to talk game design.</p>
+          <p>Available for game project collaborations, or simply to talk.</p>
           <div class="contact-links">
             <a href="mailto:theotime.rey.pro@gmail.com" class="contact-link">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
@@ -288,30 +276,30 @@
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16.92z"/></svg>
               06 52 29 02 09
             </a>
-            <span class="contact-link">
+            <a href="https://fauwlyy.github.io/Mon_Portfolio/" target="_blank" class="contact-link">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 1 0 20M2 12h20M12 2C6.48 2 2 6.48 2 12"/></svg>
               Lyon, France
-            </span>
+            </a>
           </div>
         </div>
-        <form class="contact-form reveal" action="https://formspree.io/f/VOTRE_ID_ICI" method="POST">
+        <form class="contact-form reveal" action="https://formspree.io/f/xzdqvkrq" method="POST">
           <div class="form-row">
             <div class="form-group">
-              <label for="name-en">Name</label>
-              <input type="text" id="name-en" name="name" placeholder="Your name" required />
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name" required />
             </div>
             <div class="form-group">
-              <label for="email-en">Email</label>
-              <input type="email" id="email-en" name="email" placeholder="your@email.com" required />
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="votre@email.com" required />
             </div>
           </div>
           <div class="form-group">
-            <label for="subject-en">Subject</label>
-            <input type="text" id="subject-en" name="subject" placeholder="Subject of your message" required />
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Subject of your message" required />
           </div>
           <div class="form-group">
-            <label for="message-en">Message</label>
-            <textarea id="message-en" name="message" rows="5" placeholder="Your message..." required></textarea>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Your message..." required></textarea>
           </div>
           <button type="submit" class="btn-primary btn-full">Send message</button>
         </form>
@@ -319,6 +307,7 @@
     </div>
   </section>
 
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="container">
       <div class="footer-inner">
@@ -329,6 +318,7 @@
     </div>
   </footer>
 
+  <!-- PROJECT OVERLAY -->
   <div class="project-overlay" id="projectOverlay">
     <div class="overlay-panel" id="overlayPanel">
       <button class="overlay-close" onclick="closeProject()">
