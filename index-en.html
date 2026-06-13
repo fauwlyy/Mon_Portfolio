@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0D0F14" />
   <title>Théotime Rey — Tech Game Designer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,8 +17,8 @@
     <a href="#" class="nav-logo">TR</a>
     <div class="nav-links">
       <a href="#about">About</a>
-      <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
       <a href="#contact">Contact</a>
       <a href="index.html" class="lang-switch">FR</a>
     </div>
@@ -29,13 +30,14 @@
   <!-- MOBILE MENU -->
   <div class="mobile-menu" id="mobileMenu">
     <a href="#about" class="mobile-link">About</a>
-    <a href="#skills" class="mobile-link">Skills</a>
     <a href="#projects" class="mobile-link">Projects</a>
+    <a href="#skills" class="mobile-link">Skills</a>
     <a href="#contact" class="mobile-link">Contact</a>
-    <a href="index.html" class="mobile-link lang-switch">EN</a>
+    <a href="index.html" class="mobile-link lang-switch">FR</a>
   </div>
 
   <!-- HERO -->
+  <div class="hero-wrapper">
   <section class="hero" id="home">
     <div class="hero-content">
       <p class="hero-eyebrow reveal">Tech Game Designer</p>
@@ -46,10 +48,13 @@
         <a href="#contact" class="btn-ghost">Get in touch</a>
       </div>
     </div>
-    <div class="hero-scroll">
-      <span></span>
+    <div class="hero-photo reveal">
+      <div class="hero-photo-inner">
+        <img src="assets/images/photo.jpg" alt="Théotime Rey" />
+      </div>
     </div>
   </section>
+  </div>
 
   <!-- ABOUT -->
   <section class="section" id="about">
@@ -92,9 +97,9 @@
               <span class="project-tag">Blueprint</span>
             </div>
             <h3>IRA</h3>
-            <p>Un souls-like dans un empire dystopique à l'esthétique romaine. Tu incarnes Kaia Valdrik, dernière héritière Solari, traquant le Voidwalker, la créature qui a massacré sa famille.</p>
-            <div class="project-duration">8 mois — 2025/2026</div>
-            <button class="btn-primary" onclick="openProject('ira')">Voir le projet</button>
+            <p>A souls-like set in a dystopian empire with Roman aesthetics. You play as Kaia Valdrik, last Solari heir, hunting the Voidwalker, the creature that slaughtered her family.</p>
+            <div class="project-duration">8 months — 2025/2026</div>
+            <button class="btn-primary" onclick="openProject('ira')">View project</button>
           </div>
         </article>
 
@@ -104,14 +109,14 @@
           </div>
           <div class="project-info">
             <div class="project-meta">
-              <span class="project-tag">Platformer 3D</span>
+              <span class="project-tag">3D Platformer</span>
               <span class="project-tag">Unity 6</span>
               <span class="project-tag">Cartoon</span>
             </div>
             <h3>Gecko Pulco</h3>
-            <p>Tu incarnes Pulco, un gecko dont la famille a été enlevée par des aigles dans le monde céleste. Un platformer 3D cartoon avec une direction artistique colorée et des ennemis redoutables.</p>
-            <div class="project-duration">4 mois — 2025</div>
-            <button class="btn-primary" onclick="openProject('gecko')">Voir le projet</button>
+            <p>Play as Pulco, a gecko whose family was kidnapped by eagles in the celestial world. A colorful 3D cartoon platformer with challenging enemies and sky-high stakes.</p>
+            <div class="project-duration">4 months — 2025</div>
+            <button class="btn-primary" onclick="openProject('gecko')">View project</button>
           </div>
         </article>
 
@@ -121,14 +126,31 @@
           </div>
           <div class="project-info">
             <div class="project-meta">
-              <span class="project-tag">Platformer 2D</span>
+              <span class="project-tag">2D Platformer</span>
               <span class="project-tag">Unity 6</span>
               <span class="project-tag">Gameplay + Level Design</span>
             </div>
             <h3>Before Sunrise</h3>
-            <p>Un vampire réveillé après 100 ans, affamé, doit rejoindre ses réserves au grenier avant l'aube. Gameplay d'urgence et de course contre la montre dans un platformer 2D tendu.</p>
-            <div class="project-duration">4 mois — 2024</div>
-            <button class="btn-primary" onclick="openProject('before-sunrise')">Voir le projet</button>
+            <p>A vampire awoken after 100 years must reach his blood supply before dawn burns him alive. Tense, time-pressured 2D platformer gameplay.</p>
+            <div class="project-duration">4 months — 2024</div>
+            <button class="btn-primary" onclick="openProject('before-sunrise')">View project</button>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-project="qdi">
+          <div class="project-thumb">
+            <img src="https://fauwlyy.github.io/Mon_Portfolio/assets/images/qui-devinera-l'image.png" alt="Who will guess the image?" />
+          </div>
+          <div class="project-info">
+            <div class="project-meta">
+              <span class="project-tag">Voice game</span>
+              <span class="project-tag">Unity</span>
+              <span class="project-tag">Game Design</span>
+            </div>
+            <h3>Who will guess the image?</h3>
+            <p>You play as a character who must find the word matching the image in front of them or fall and lose. The game is played entirely with your voice.</p>
+            <div class="project-duration">1 week — 2024</div>
+            <button class="btn-primary" onclick="openProject('qdi')">View project</button>
           </div>
         </article>
 
@@ -138,14 +160,14 @@
           </div>
           <div class="project-info">
             <div class="project-meta">
-              <span class="project-tag">Platformer 2D</span>
+              <span class="project-tag">2D Platformer</span>
               <span class="project-tag">Unity 2022</span>
               <span class="project-tag">Puzzle</span>
             </div>
             <h3>Lost Souls</h3>
-            <p>Trois êtres fantomatiques coincés entre la vie et la mort doivent résoudre des énigmes et récolter des fragments d'âmes de leur passé pour trouver la paix.</p>
-            <div class="project-duration">4 mois — 2024</div>
-            <button class="btn-primary" onclick="openProject('lost-souls')">Voir le projet</button>
+            <p>Three ghostly beings stuck between life and death must solve puzzles and gather soul fragments from their past to finally find peace.</p>
+            <div class="project-duration">4 months — 2024</div>
+            <button class="btn-primary" onclick="openProject('lost-souls')">View project</button>
           </div>
         </article>
 
@@ -239,19 +261,27 @@
             <div class="timeline-item">
               <div class="timeline-dot"></div>
               <div class="timeline-body">
-                <span class="timeline-date">2025–2026 · 6 mois</span>
-                <strong>Game Designer — Internship</strong>
-                <p>Level Design, Game Design and programming.</p>
+                <span class="timeline-date">Ongoing</span>
+                <strong>Gameplay Programmer — Internship</strong>
+                <p>Unreal Engine 5 Blueprint</p>
               </div>
             </div>
             <div class="timeline-item">
               <div class="timeline-dot"></div>
               <div class="timeline-body">
-                <span class="timeline-date">2025–2026 · 6 mois</span>
-                <strong>Acteur — Dark Expérience</strong>
+                <span class="timeline-date">2025–2026 · 6 months</span>
+                <strong>Actor — Dark Experience</strong>
                 <p>Horror rooms "La Nonne" and "La Créature".</p>
               </div>
             </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-body">
+                <span class="timeline-date">2025 · 44 days</span>
+                <strong>Game Designer — Internship</strong>
+                <p>Level Design, Game Design and programming.</p>
+              </div>
             </div>
           </div>
         </div>

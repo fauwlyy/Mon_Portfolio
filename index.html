@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0D0F14" />
   <title>Théotime Rey — Tech Game Designer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,8 +17,8 @@
     <a href="#" class="nav-logo">TR</a>
     <div class="nav-links">
       <a href="#about">À propos</a>
-      <a href="#skills">Skills</a>
       <a href="#projects">Projets</a>
+      <a href="#skills">Skills</a>
       <a href="#contact">Contact</a>
       <a href="index-en.html" class="lang-switch">EN</a>
     </div>
@@ -29,13 +30,14 @@
   <!-- MOBILE MENU -->
   <div class="mobile-menu" id="mobileMenu">
     <a href="#about" class="mobile-link">À propos</a>
-    <a href="#skills" class="mobile-link">Skills</a>
     <a href="#projects" class="mobile-link">Projets</a>
+    <a href="#skills" class="mobile-link">Skills</a>
     <a href="#contact" class="mobile-link">Contact</a>
     <a href="index-en.html" class="mobile-link lang-switch">EN</a>
   </div>
 
   <!-- HERO -->
+  <div class="hero-wrapper">
   <section class="hero" id="home">
     <div class="hero-content">
       <p class="hero-eyebrow reveal">Tech Game Designer</p>
@@ -46,10 +48,13 @@
         <a href="#contact" class="btn-ghost">Me contacter</a>
       </div>
     </div>
-    <div class="hero-scroll">
-      <span></span>
+    <div class="hero-photo reveal">
+      <div class="hero-photo-inner">
+        <img src="assets/images/photo.jpg" alt="Théotime Rey" />
+      </div>
     </div>
   </section>
+  </div>
 
   <!-- ABOUT -->
   <section class="section" id="about">
@@ -129,6 +134,23 @@
             <p>Un vampire réveillé après 100 ans, affamé, doit rejoindre ses réserves au grenier avant l'aube. Gameplay d'urgence et de course contre la montre dans un platformer 2D tendu.</p>
             <div class="project-duration">4 mois — 2024</div>
             <button class="btn-primary" onclick="openProject('before-sunrise')">Voir le projet</button>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-project="qdi">
+          <div class="project-thumb">
+            <img src="https://fauwlyy.github.io/Mon_Portfolio/assets/images/qui-devinera-l'image.png" alt="Qui devinera l'image ?" />
+          </div>
+          <div class="project-info">
+            <div class="project-meta">
+              <span class="project-tag">Jeu vocal</span>
+              <span class="project-tag">Unity</span>
+              <span class="project-tag">Game Design</span>
+            </div>
+            <h3>Qui devinera l'image ?</h3>
+            <p>Tu incarnes un personnage qui doit trouver le mot correspondant à l'image devant lui pour ne pas tomber et perdre la partie. Le jeu se joue entièrement à la voix.</p>
+            <div class="project-duration">1 semaine — 2024</div>
+            <button class="btn-primary" onclick="openProject('qdi')">Voir le projet</button>
           </div>
         </article>
 
@@ -239,9 +261,9 @@
             <div class="timeline-item">
               <div class="timeline-dot"></div>
               <div class="timeline-body">
-                <span class="timeline-date">2025–2026 · 6 mois</span>
-                <strong>Game Designer — Stage</strong>
-                <p>Level Design, Game Design et programmation.</p>
+                <span class="timeline-date">En cours</span>
+                <strong>Gameplay Programmer - Stage</strong>
+                <p>Unreal Engine 5 Blueprint</p>
               </div>
             </div>
             <div class="timeline-item">
@@ -253,6 +275,15 @@
               </div>
             </div>
             </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-body">
+                <span class="timeline-date">2025 · 44 jours</span>
+                <strong>Game Designer — Stage</strong>
+                <p>Level Design, Game Design et programmation sur Unity.</p>
+              </div>
+            </div>
+            
           </div>
         </div>
       </div>
@@ -266,7 +297,7 @@
       <h2 class="section-title reveal">Contact</h2>
       <div class="contact-grid">
         <div class="contact-info reveal">
-          <p>Disponible pour des des collaborations sur des projets de jeux, ou simplement pour discuter.</p>
+          <p>Disponible pour des collaborations sur des projets de jeux, ou simplement pour discuter.</p>
           <div class="contact-links">
             <a href="mailto:theotime.rey.pro@gmail.com" class="contact-link">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>

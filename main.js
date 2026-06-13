@@ -1,7 +1,3 @@
-// ============================================
-// MAIN.JS — Portfolio Théotime Rey
-// ============================================
-
 // --- NAV SCROLL ---
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => {

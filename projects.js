@@ -1,7 +1,3 @@
-// ============================================
-// DONNÉES PROJETS — à personnaliser librement
-// ============================================
-
 const PROJECTS = {
   ira: {
     title: "IRA",
