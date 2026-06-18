@@ -1,3 +1,8 @@
+/* ============================================
+   THÉOTIME REY — PORTFOLIO
+   Design: dark minimal, Space Grotesk
+   ============================================ */
+
 :root {
   --bg: #0D0F14;
   --bg-dark: #080A0E;
@@ -302,6 +307,15 @@ strong { font-weight: 600; }
   inset: 0;
   background: linear-gradient(to top, rgba(13,15,20,0.45) 0%, transparent 55%);
   pointer-events: none;
+}
+
+.hero-about-btn {
+  display: block;
+  text-align: center;
+  margin-top: 0.75rem;
+  font-size: 0.8rem;
+  padding: 0.5rem 1rem;
+  width: 100%;
 }
 
 .hero-photo-inner img {

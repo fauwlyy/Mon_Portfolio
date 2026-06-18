@@ -17,8 +17,8 @@ Depuis, elle vit loin des cités impériales, au sein de la résistance Solari, 
     mainImage: "https://fauwlyy.github.io/Mon_Portfolio/assets/images/IRA.png",
     videoUrl: "https://www.youtube.com/embed/Wy5PBMCPGxM",
     screenshots: [],
-    link: "https://fauwly.itch.io/ira",
-    linkLabel: "Voir sur itch.io",
+    link: "https://drive.google.com/file/d/1RjOOemX_M-oCV9NBh7SHaiYTTkmFRGBn/view?usp=sharing",
+    linkLabel: "Télécharger le build sur mon drive",
   },
 
   gecko: {
@@ -118,7 +118,7 @@ She now lives far from the imperial cities, within the Solari resistance, relent
       { label: "Team", value: "8 people" },
       { label: "Genre", value: "Souls-like 3D" },
     ],
-    linkLabel: "View on itch.io",
+    linkLabel: "Download the build on my drive",
   },
   gecko: {
     ...PROJECTS.gecko,

@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0D0F14" />
+  <title>À propos — Théotime Rey</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ── PAGE ABOUT ── */
+    .about-page {
+      padding-top: calc(var(--nav-h) + 4rem);
+      padding-bottom: 6rem;
+    }
+
+    .about-hero {
+      padding: 0 clamp(1.25rem, 5vw, 3rem) 5rem;
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .about-intro {
+      font-size: clamp(1rem, 1.8vw, 1.15rem);
+      color: var(--text-muted);
+      max-width: 680px;
+      line-height: 1.8;
+    }
+
+    .about-intro strong { color: var(--text); }
+
+    /* ── GAMES ── */
+    .games-section {
+      background: var(--bg-dark);
+      padding: 5rem 0;
+    }
+
+    .fav-banner {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      background: linear-gradient(135deg, rgba(123,94,167,0.15), rgba(197,242,58,0.05));
+      border: 1px solid rgba(123,94,167,0.3);
+      border-radius: 14px;
+      padding: 1.5rem 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .fav-badge {
+      font-family: var(--font-display);
+      font-size: 1.8rem;
+      flex-shrink: 0;
+    }
+
+    .fav-text strong {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 0.25rem;
+    }
+
+    .fav-text span {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+    }
+
+    .fav-text em {
+      color: var(--lime);
+      font-style: normal;
+      font-weight: 600;
+    }
+
+    /* catégories */
+    .game-category {
+      margin-bottom: 3.5rem;
+    }
+
+    .game-category-header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .game-category-icon {
+      font-size: 1.2rem;
+    }
+
+    .game-category-title {
+      font-family: var(--font-display);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    .game-category-line {
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    .games-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+      gap: 0.75rem;
+    }
+
+    .game-card {
+      position: relative;
+      border-radius: 10px;
+      overflow: hidden;
+      aspect-ratio: 3/4;
+      cursor: default;
+      background: var(--surface);
+      border: 1px solid var(--border);
+    }
+
+    .game-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s cubic-bezier(0.4,0,0.2,1);
+    }
+
+    .game-card:hover img {
+      transform: scale(1.08);
+    }
+
+    .game-card-label {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: flex-end;
+      padding: 0.75rem;
+      background: linear-gradient(to top, rgba(8,10,14,0.92) 0%, rgba(8,10,14,0.3) 50%, transparent 100%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .game-card:hover .game-card-label {
+      opacity: 1;
+    }
+
+    .game-card-label span {
+      font-family: var(--font-display);
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1.2;
+    }
+
+    .game-card.is-fav::after {
+      content: '★';
+      position: absolute;
+      top: 0.5rem;
+      right: 0.5rem;
+      background: var(--lime);
+      color: #0D0F14;
+      font-size: 0.65rem;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      z-index: 2;
+    }
+
+    /* ── HOBBIES ── */
+    .hobbies-section {
+      padding: 5rem 0;
+    }
+
+    .hobbies-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.25rem;
+      margin-top: 2rem;
+    }
+
+    .hobby-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 2rem;
+      transition: all var(--transition);
+    }
+
+    .hobby-card:hover {
+      border-color: rgba(123,94,167,0.35);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.3);
+    }
+
+    .hobby-icon {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    .hobby-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+    }
+
+    .hobby-card p {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    .hobby-card p em {
+      color: var(--lime);
+      font-style: normal;
+      font-weight: 600;
+    }
+
+    /* ── INTRO GRID WITH PHOTO ── */
+    .about-intro-grid {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .about-intro-photo {
+      width: clamp(160px, 18vw, 240px);
+      aspect-ratio: 3/4;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid rgba(123,94,167,0.3);
+      flex-shrink: 0;
+    }
+
+    .about-intro-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      display: block;
+    }
+
+    @media (max-width: 700px) {
+      .about-intro-grid { grid-template-columns: 1fr; }
+      .about-intro-photo { width: 100px; aspect-ratio: 1/1; border-radius: 50%; }
+    }
+    @media (max-width: 640px) {
+      .games-grid { grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); }
+      .hobbies-grid { grid-template-columns: 1fr; }
+      .fav-banner { flex-direction: column; align-items: flex-start; gap: 0.75rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav scrolled" id="nav">
+    <a href="index.html" class="nav-logo">TR</a>
+    <div class="nav-links">
+      <a href="index.html">Accueil</a>
+      <a href="index.html#projects">Projets</a>
+      <a href="index.html#skills">Skills</a>
+      <a href="index.html#contact">Contact</a>
+      <a href="about-en.html" class="lang-switch">EN</a>
+    </div>
+    <button class="nav-burger" id="burger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html" class="mobile-link">Accueil</a>
+    <a href="index.html#projects" class="mobile-link">Projets</a>
+    <a href="index.html#skills" class="mobile-link">Skills</a>
+    <a href="index.html#contact" class="mobile-link">Contact</a>
+    <a href="about-en.html" class="mobile-link lang-switch">EN</a>
+  </div>
+
+  <div class="about-page">
+
+    <!-- INTRO -->
+    <div class="about-hero">
+      <p class="section-eyebrow">À propos</p>
+      <div class="about-intro-grid">
+        <p class="about-intro">
+          Je suis <strong>Théotime</strong>, étudiant en Game Design à Lyon, mais mon rapport aux jeux vidéo dépasse largement les études. Les jeux font partie de qui je suis, des mondes que j'explore, des mécaniques qui m'obsèdent, des émotions que je veux recréer. En dehors des écrans, je suis aussi quelqu'un qui aime se dépenser, regarder du sport et plus particulièrement en ce moment l'univers du MMA.
+        </p>
+        <div class="about-intro-photo">
+          <img src="assets/images/photo.jpg" alt="Théotime Rey" />
+        </div>
+      </div>
+    </div>
+
+    <!-- GAMES -->
+    <section class="games-section">
+      <div class="container">
+        <p class="section-eyebrow reveal">Univers ludique</p>
+        <h2 class="section-title reveal">Une sélection de<br><span class="accent">jeux qui m'ont marqué</span></h2>
+
+        <div style="margin-top: 2rem;">
+          <!-- BANNIÈRE JEU PRÉFÉRÉ -->
+          <div class="fav-banner reveal">
+            <div class="fav-badge">🏆</div>
+            <div class="fav-text">
+              <strong>Subnautica</strong>
+              <span>Mon jeu préféré de tous les temps. <em>Les jeux de survie sont ma catégorie de prédilection.</em> L'exploration des abysses, l'angoisse du vide, la liberté totale. Subnautica, c'est une expérience unique que rien n'a encore égalé selon moi dans les jeux de survie.</span>
+            </div>
+          </div>
+
+          <!-- SURVIE / EXPLORATION -->
+          <div class="game-category reveal">
+            <div class="game-category-header">
+              <span class="game-category-title">Survie & Exploration</span>
+              <div class="game-category-line"></div>
+            </div>
+            <div class="games-grid">
+              <div class="game-card is-fav">
+                <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/264710/library_600x900.jpg" alt="Subnautica" loading="lazy" />
+                <div class="game-card-label"><span>Subnautica</span></div>
+              </div>
+              <div class="game-card">
+                <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1962700/library_600x900.jpg" alt="Subnautica 2" loading="lazy" />
+                <div class="game-card-label"><span>Subnautica 2</span></div>
+              </div>
+              <div class="game-card">
+                <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/848450/library_600x900.jpg" alt="Subnautica Below Zero" loading="lazy" />
+                <div class="game-card-label"><span>Below Zero</span></div>
+              </div>
+              <div class="game-card">
+                <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/242760/library_600x900.jpg" alt="The Forest" loading="lazy" />
+                <div class="game-card-label"><span>The Forest</span></div>
+              </div>
+              <div class="game-card">
+                <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1326470/library_600x900.jpg" alt="Sons of the Forest" loading="lazy" />
+                <div class="game-card-label"><span>Sons of the Forest</span></div>
+              </div>
+              <div class="game-card">
+                <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/648800/library_600x900.jpg" alt="Raft" loading="lazy" />
+                <div class="game-card-label"><span>Raft</span></div>
+              </div>
+              <div class="game-card">
+                <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/892970/library_600x900.jpg" alt="Valheim" loading="lazy" />
+                <div class="game-card-label"><span>Valheim</span></div>
+              </div>
+              <div class="game-card">
+                <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1604030/library_600x900.jpg" alt="V Rising" loading="lazy" />
+                <div class="game-card-label"><span>V Rising</span></div>
+              </div>
+              <div class="game-card">
+                <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/387990/library_600x900.jpg" alt="Scrap Mechanic" loading="lazy" />
+                <div class="game-card-label"><span>Scrap Mechanic</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- SOULS-LIKE / ACTION -->
+          <div class="game-category reveal">
+            <div class="game-category-header">
+              <span class="game-category-title">Souls-like & Action</span>
+              <div class="game-category-line"></div>
+            </div>
+            <div class="games-grid">
+              <div class="game-card">
+                <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/814380/library_600x900.jpg" alt="Sekiro" loading="lazy" />
+                <div class="game-card-label"><span>Sekiro</span></div>
+              </div>
+              <div class="game-card">
+                <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/2680010/library_600x900.jpg" alt="First Berzerker Khazan" loading="lazy" />
+                <div class="game-card-label"><span>First Berzerker: Khazan</span></div>
+              </div>
+              <div class="game-card">
+                <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1627720/library_600x900.jpg" alt="Lies of P" loading="lazy" />
+                <div class="game-card-label"><span>Lies of P</span></div>
+              </div>
+              <div class="game-card">
+                <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/2358720/library_600x900.jpg" alt="Black Myth Wukong" loading="lazy" />
+                <div class="game-card-label"><span>Black Myth: Wukong</span></div>
+              </div>
+              <div class="game-card">
+                <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/3489700/library_600x900.jpg" alt="Stellar Blade" loading="lazy" />
+                <div class="game-card-label"><span>Stellar Blade</span></div>
+              </div>
+              <div class="game-card">
+                <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1887840/library_600x900.jpg" alt="Another Crab's Treasure" loading="lazy" />
+                <div class="game-card-label"><span>Another Crab's Treasure</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- AVENTURE / NARRATIF -->
+          <div class="game-category reveal">
+            <div class="game-category-header">
+              <span class="game-category-title">Aventure & Narratif</span>
+              <div class="game-category-line"></div>
+            </div>
+            <div class="games-grid">
+              <div class="game-card">
+                <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1888930/library_600x900.jpg" alt="The Last of Us Part I" loading="lazy" />
+                <div class="game-card-label"><span>The Last of Us Part I</span></div>
+              </div>
+              <div class="game-card">
+                <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/2531310/library_600x900.jpg" alt="The Last of Us Part II" loading="lazy" />
+                <div class="game-card-label"><span>The Last of Us Part II</span></div>
+              </div>
+              <div class="game-card">
+                <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1174180/library_600x900.jpg" alt="Red Dead Redemption 2" loading="lazy" />
+                <div class="game-card-label"><span>Red Dead Redemption 2</span></div>
+              </div>
+              <div class="game-card">
+                <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1426210/library_600x900.jpg" alt="It Takes Two" loading="lazy" />
+                <div class="game-card-label"><span>It Takes Two</span></div>
+              </div>
+              <div class="game-card">
+                <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/2001120/library_600x900.jpg" alt="Split Fiction" loading="lazy" />
+                <div class="game-card-label"><span>Split Fiction</span></div>
+              </div>
+              <div class="game-card">
+                <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/72850/library_600x900.jpg" alt="Skyrim" loading="lazy" />
+                <div class="game-card-label"><span>Skyrim</span></div>
+              </div>
+              <div class="game-card">
+                <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/582010/library_600x900.jpg" alt="Monster Hunter World" loading="lazy" />
+                <div class="game-card-label"><span>Monster Hunter World</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- MULTIJOUEUR / ONLINE -->
+          <div class="game-category reveal">
+            <div class="game-category-header">
+              <span class="game-category-title">Multijoueur & Online</span>
+              <div class="game-category-line"></div>
+            </div>
+            <div class="games-grid">
+              <div class="game-card">
+                <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/3241660/library_600x900.jpg" alt="REPO" loading="lazy" />
+                <div class="game-card-label"><span>R.E.P.O.</span></div>
+              </div>
+              <div class="game-card">
+                <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/2343650/library_600x900.jpg" alt="Waven" loading="lazy" />
+                <div class="game-card-label"><span>Waven</span></div>
+              </div>
+              <div class="game-card">
+                <img src="assets/images/games/valorant.jpg" alt="Valorant" loading="lazy" />
+                <div class="game-card-label"><span>Valorant</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- SANDBOX / CRÉATIF -->
+          <div class="game-category reveal">
+            <div class="game-category-header">
+              <span class="game-category-title">Sandbox & Créatif</span>
+              <div class="game-category-line"></div>
+            </div>
+            <div class="games-grid">
+              <div class="game-card">
+                <img src="assets/images/games/minecraft.jpg" alt="Minecraft" loading="lazy" />
+                <div class="game-card-label"><span>Minecraft</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- MMORPG -->
+          <div class="game-category reveal">
+            <div class="game-category-header">
+              <span class="game-category-title">MMORPG</span>
+              <div class="game-category-line"></div>
+            </div>
+            <div class="games-grid">
+              <div class="game-card">
+                <img src="assets/images/games/flyff.jpg" alt="Flyff Universe" loading="lazy" />
+                <div class="game-card-label"><span>Flyff Universe</span></div>
+              </div>
+              <div class="game-card">
+                <img src="assets/images/games/nostale.jpg" alt="NosTale" loading="lazy" />
+                <div class="game-card-label"><span>NosTale</span></div>
+              </div>
+              <div class="game-card">
+                <img src="assets/images/games/dofus.png" alt="Dofus" loading="lazy" />
+                <div class="game-card-label"><span>Dofus</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- POKÉMON -->
+          <div class="game-category reveal">
+            <div class="game-category-header">
+              <span class="game-category-title">Pokémon</span>
+              <div class="game-category-line"></div>
+            </div>
+            <div class="games-grid">
+              <div class="game-card">
+                <img src="assets/images/games/noir2.jpeg" alt="Pokémon Noir 2 / Blanc 2" loading="lazy" />
+                <div class="game-card-label"><span>Pokémon Noir 2 / Blanc 2</span></div>
+              </div>
+              <div class="game-card">
+                <img src="assets/images/games/argentss.png" alt="Pokémon Argent" loading="lazy" />
+                <div class="game-card-label"><span>Pokémon Argent</span></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <section class="hobbies-section">
+      <div class="container">
+        <p class="section-eyebrow reveal">Hors écran</p>
+        <h2 class="section-title reveal">Loisirs & Passions</h2>
+        <div class="hobbies-grid">
+
+          <div class="hobby-card reveal">
+            <span class="hobby-icon">🏋️</span>
+            <h3>Musculation</h3>
+            <p>La salle, c'est mon exutoire. J'aime la progression, la discipline, et le feeling après une bonne séance. Autant mental que physique.</p>
+          </div>
+
+          <div class="hobby-card reveal">
+            <span class="hobby-icon">🥊</span>
+            <h3>MMA, ma lubie du moment</h3>
+            <p>Je suis depuis peu l'univers des arts martiaux mixtes, les combats, les stratégies, les athlètes. <em>C'est devenu une vraie lubie</em>, j'adore analyser les styles et les combats.</p>
+          </div>
+
+          <div class="hobby-card reveal">
+            <span class="hobby-icon">📺</span>
+            <h3>Regarder différents sports</h3>
+            <p>J'aime regarder du sport en général, pas seulement le MMA. Le spectacle, la compétition, l'intensité des grands événements sportifs.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <span class="footer-logo">Théotime Rey</span>
+        <span class="footer-copy">© 2025 — Tech Game Designer</span>
+        <a href="about-en.html" class="lang-switch">EN</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
