@@ -982,6 +982,77 @@ strong { font-weight: 600; }
   margin-top: 2rem;
 }
 
+.overlay-task-section {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+}
+
+.overlay-task-title {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--lime);
+  margin-bottom: 1rem;
+}
+
+.overlay-task-video {
+  margin-left: 0 !important;
+  width: 100% !important;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.overlay-timecodes {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  padding: 1.25rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.overlay-timecode-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  padding: 0.3rem 0.5rem;
+  border-radius: 6px;
+  transition: background var(--transition);
+}
+
+.overlay-timecode-item:hover {
+  background: rgba(197, 242, 58, 0.08);
+}
+
+.overlay-timecode-item:hover .overlay-timecode-time {
+  color: #d4f54a;
+}
+
+.overlay-timecode-item:hover .overlay-timecode-label {
+  color: var(--text);
+}
+
+.overlay-timecode-time {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--lime);
+  flex-shrink: 0;
+  min-width: 38px;
+}
+
+.overlay-timecode-label {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
 /* Backdrop overlay */
 .overlay-bg {
   position: absolute;

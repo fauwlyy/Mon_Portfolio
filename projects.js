@@ -1,3 +1,7 @@
+// ============================================
+// DONNÉES PROJETS — à personnaliser librement
+// ============================================
+
 const PROJECTS = {
   ira: {
     title: "IRA",
@@ -16,9 +20,31 @@ Depuis, elle vit loin des cités impériales, au sein de la résistance Solari, 
     ],
     mainImage: "https://fauwlyy.github.io/Mon_Portfolio/assets/images/IRA.png",
     videoUrl: "https://www.youtube.com/embed/Wy5PBMCPGxM",
+    taskVideoUrl: "https://www.youtube.com/embed/2gQ0dFmScKc",
+    taskVideoLabel: "Mes contributions",
+    taskTimecodes: [
+      { time: "00:00", label: "Introduction" },
+      { time: "00:14", label: "Déplacements" },
+      { time: "00:40", label: "Dodge" },
+      { time: "01:04", label: "Sprint" },
+      { time: "01:24", label: "Attaques du joueur" },
+      { time: "02:12", label: "Système de dégâts" },
+      { time: "02:48", label: "Interaction" },
+      { time: "03:09", label: "Assassinat" },
+      { time: "03:35", label: "Parade / Parade parfaite" },
+      { time: "04:21", label: "Feu de camp" },
+      { time: "04:47", label: "Camera Lock" },
+      { time: "05:27", label: "Ascenseur" },
+      { time: "06:22", label: "VFX / Shaders" },
+      { time: "07:34", label: "Tutoriels" },
+      { time: "07:58", label: "Utilisation d'objets quick slot" },
+      { time: "08:59", label: "Mode rage" },
+      { time: "09:38", label: "Dégâts de chute" },
+      { time: "09:50", label: "Portes / Raccourcis" },
+    ],
     screenshots: [],
     link: "https://drive.google.com/file/d/1RjOOemX_M-oCV9NBh7SHaiYTTkmFRGBn/view?usp=sharing",
-    linkLabel: "Télécharger le build sur mon drive",
+    linkLabel: "Télécharger le build",
   },
 
   gecko: {
@@ -81,6 +107,7 @@ Un platformer-puzzle 2D développé sur Unity 2022 en équipe, avec un fort acce
     link: "https://fauwly.itch.io/lost-souls",
     linkLabel: "Voir sur itch.io",
   },
+
   "qdi": {
     title: "Qui devinera l'image ?",
     eyebrow: "Jeu vocal · 2024",
@@ -118,7 +145,28 @@ She now lives far from the imperial cities, within the Solari resistance, relent
       { label: "Team", value: "8 people" },
       { label: "Genre", value: "Souls-like 3D" },
     ],
-    linkLabel: "Download the build on my drive",
+    linkLabel: "Download the build",
+    taskVideoLabel: "My contributions",
+    taskTimecodes: [
+      { time: "00:00", label: "Introduction" },
+      { time: "00:14", label: "Movement" },
+      { time: "00:40", label: "Dodge" },
+      { time: "01:04", label: "Sprint" },
+      { time: "01:24", label: "Player attacks" },
+      { time: "02:12", label: "Damage system" },
+      { time: "02:48", label: "Interaction" },
+      { time: "03:09", label: "Assassination" },
+      { time: "03:35", label: "Parry / Perfect parry" },
+      { time: "04:21", label: "Campfire" },
+      { time: "04:47", label: "Camera Lock" },
+      { time: "05:27", label: "Elevator" },
+      { time: "06:22", label: "VFX / Shaders" },
+      { time: "07:34", label: "Tutorials" },
+      { time: "07:58", label: "Quick slot item use" },
+      { time: "08:59", label: "Rage mode" },
+      { time: "09:38", label: "Fall damage" },
+      { time: "09:50", label: "Doors / Shortcuts" },
+    ],
   },
   gecko: {
     ...PROJECTS.gecko,

@@ -1,3 +1,7 @@
+// ============================================
+// MAIN.JS — Portfolio Théotime Rey
+// ============================================
+
 // --- NAV SCROLL ---
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => {
@@ -89,6 +93,32 @@ function openProject(id) {
     .map(p => `<p class="overlay-desc">${p.trim()}</p>`)
     .join('');
 
+  // Build task video section
+  let taskVideoHTML = '';
+  if (data.taskVideoUrl && data.taskVideoUrl !== 'VOTRE_URL_ICI') {
+    const timecodesHTML = data.taskTimecodes && data.taskTimecodes.length > 0
+      ? `<div class="overlay-timecodes">
+          ${data.taskTimecodes.map(tc => {
+            const [min, sec] = tc.time.split(':').map(Number);
+            const totalSec = min * 60 + sec;
+            return `<div class="overlay-timecode-item" onclick="jumpToTime('overlay-task-iframe', ${totalSec})" role="button" tabindex="0">
+              <span class="overlay-timecode-time">${tc.time}</span>
+              <span class="overlay-timecode-label">${tc.label}</span>
+            </div>`;
+          }).join('')}
+        </div>`
+      : '';
+
+    taskVideoHTML = `
+      <div class="overlay-task-section">
+        <h3 class="overlay-task-title">${data.taskVideoLabel || 'Mes contributions'}</h3>
+        <div class="overlay-media overlay-task-video">
+          <iframe id="overlay-task-iframe" src="${data.taskVideoUrl}" allowfullscreen></iframe>
+        </div>
+        ${timecodesHTML}
+      </div>`;
+  }
+
   // Build CTA
   const linkHTML = data.link
     ? `<div class="overlay-actions">
@@ -104,6 +134,7 @@ function openProject(id) {
     ${descHTML}
     ${detailsHTML}
     ${screenshotsHTML}
+    ${taskVideoHTML}
     ${linkHTML}
   `;
 
@@ -122,8 +153,18 @@ function closeProject() {
   if (lastFocused) lastFocused.focus();
 }
 
-// Close on Escape
+function jumpToTime(iframeId, seconds) {
+  const iframe = document.getElementById(iframeId);
+  if (!iframe) return;
+  const base = iframe.src.split('?')[0].split('#')[0];
+  iframe.src = `${base}?start=${seconds}&autoplay=1`;
+}
+
+// Keyboard support for timecodes
 document.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter' && e.target.classList.contains('overlay-timecode-item')) {
+    e.target.click();
+  }
   if (e.key === 'Escape' && overlay.classList.contains('open')) closeProject();
 });
 
