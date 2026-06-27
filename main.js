@@ -1,7 +1,3 @@
-// ============================================
-// MAIN.JS — Portfolio Théotime Rey
-// ============================================
-
 // --- NAV SCROLL ---
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => {
@@ -116,6 +112,31 @@ function openProject(id) {
           <iframe id="overlay-task-iframe" src="${data.taskVideoUrl}" allowfullscreen></iframe>
         </div>
         ${timecodesHTML}
+        ${data.enviroSection ? `
+        <div class="overlay-enviro">
+          <h3 class="overlay-task-title" style="margin-top:1.5rem;">${data.enviroSection.title}</h3>
+          <p class="overlay-desc">${data.enviroSection.text}</p>
+          <div class="enviro-carousel" id="enviro-carousel">
+            <button class="carousel-arrow carousel-prev" onclick="carouselMove(-1)" aria-label="Précédent">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+            </button>
+            <div class="carousel-track-wrap">
+              <div class="carousel-track" id="carousel-track">
+                ${data.enviroSection.images.map((src, i) => `
+                  <div class="carousel-slide">
+                    <img src="${src}" alt="Narration environnementale ${i + 1}" loading="lazy" />
+                  </div>`).join('')}
+              </div>
+            </div>
+            <button class="carousel-arrow carousel-next" onclick="carouselMove(1)" aria-label="Suivant">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            </button>
+            <div class="carousel-dots" id="carousel-dots">
+              ${data.enviroSection.images.map((_, i) => `
+                <button class="carousel-dot ${i === 0 ? 'active' : ''}" onclick="carouselGo(${i})" aria-label="Image ${i + 1}"></button>`).join('')}
+            </div>
+          </div>
+        </div>` : ''}
       </div>`;
   }
 
@@ -140,6 +161,7 @@ function openProject(id) {
 
   overlay.classList.add('open');
   document.body.style.overflow = 'hidden';
+  carouselIndex = 0;
 
   // Add backdrop click to close
   overlay.onclick = (e) => {
@@ -151,6 +173,30 @@ function closeProject() {
   overlay.classList.remove('open');
   document.body.style.overflow = '';
   if (lastFocused) lastFocused.focus();
+}
+
+// --- CAROUSEL ---
+let carouselIndex = 0;
+
+function carouselMove(dir) {
+  const track = document.getElementById('carousel-track');
+  if (!track) return;
+  const total = track.children.length;
+  carouselIndex = (carouselIndex + dir + total) % total;
+  carouselUpdate();
+}
+
+function carouselGo(index) {
+  carouselIndex = index;
+  carouselUpdate();
+}
+
+function carouselUpdate() {
+  const track = document.getElementById('carousel-track');
+  const dots = document.querySelectorAll('.carousel-dot');
+  if (!track) return;
+  track.style.transform = `translateX(-${carouselIndex * 100}%)`;
+  dots.forEach((d, i) => d.classList.toggle('active', i === carouselIndex));
 }
 
 function jumpToTime(iframeId, seconds) {

@@ -1,7 +1,3 @@
-// ============================================
-// DONNÉES PROJETS — à personnaliser librement
-// ============================================
-
 const PROJECTS = {
   ira: {
     title: "IRA",
@@ -14,7 +10,7 @@ Depuis, elle vit loin des cités impériales, au sein de la résistance Solari, 
       { label: "Durée", value: "8 mois" },
       { label: "Période", value: "2025–2026" },
       { label: "Moteur", value: "Unreal Engine 5" },
-      { label: "Rôle", value: "Gameplay Programming" },
+      { label: "Rôle", value: "Gameplay Programming Blueprint" },
       { label: "Équipe", value: "8 personnes" },
       { label: "Genre", value: "Souls-like 3D" },
     ],
@@ -42,9 +38,20 @@ Depuis, elle vit loin des cités impériales, au sein de la résistance Solari, 
       { time: "09:38", label: "Dégâts de chute" },
       { time: "09:50", label: "Portes / Raccourcis" },
     ],
+    enviroSection: {
+      title: "Narration environnementale",
+      text: "En parallèle de la programmation gameplay, j'ai également contribué à la narration environnementale du jeu : placement de props, mise en scène des environnements pour raconter l'histoire du monde sans dialogue.",
+      images: [
+        "assets/images/enviro/enviro1.png",
+        "assets/images/enviro/enviro2.png",
+        "assets/images/enviro/enviro3.png",
+        "assets/images/enviro/enviro4.png",
+        "assets/images/enviro/enviro5.png",
+      ],
+    },
     screenshots: [],
     link: "https://drive.google.com/file/d/1RjOOemX_M-oCV9NBh7SHaiYTTkmFRGBn/view?usp=sharing",
-    linkLabel: "Télécharger le build",
+    linkLabel: "Télécharger le build sur mon Google Drive",
   },
 
   gecko: {
@@ -141,11 +148,11 @@ She now lives far from the imperial cities, within the Solari resistance, relent
       { label: "Duration", value: "8 months" },
       { label: "Period", value: "2025–2026" },
       { label: "Engine", value: "Unreal Engine 5" },
-      { label: "Role", value: "Gameplay Programming" },
+      { label: "Role", value: "Gameplay Programming Blueprint" },
       { label: "Team", value: "8 people" },
       { label: "Genre", value: "Souls-like 3D" },
     ],
-    linkLabel: "Download the build",
+    linkLabel: "Download the build on my Google Drive",
     taskVideoLabel: "My contributions",
     taskTimecodes: [
       { time: "00:00", label: "Introduction" },
@@ -167,6 +174,17 @@ She now lives far from the imperial cities, within the Solari resistance, relent
       { time: "09:38", label: "Fall damage" },
       { time: "09:50", label: "Doors / Shortcuts" },
     ],
+    enviroSection: {
+      title: "Environmental narration",
+      text: "Alongside gameplay programming, I also contributed to the game's environmental storytelling : prop placement and scene composition to convey the world's history without dialogue.",
+      images: [
+        "assets/images/enviro/enviro1.png",
+        "assets/images/enviro/enviro2.png",
+        "assets/images/enviro/enviro3.png",
+        "assets/images/enviro/enviro4.png",
+        "assets/images/enviro/enviro5.png",
+      ],
+    },
   },
   gecko: {
     ...PROJECTS.gecko,
